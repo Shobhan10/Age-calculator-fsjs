@@ -12,7 +12,10 @@ dob.addEventListener("input", getAge);
 
 function getAge() {
   const dateOfBirth = new Date(dob.value);
-  console.log(typeof dateOfBirth.getFullYear());
+  const dobYear = dateOfBirth.getFullYear();
+  const dobMonth = dateOfBirth.getMonth() + 1;
+  const dobDate = dateOfBirth.getDate();
+  calcAge(dobYear, dobMonth, dobDate);
 }
 
 function calcAge() {}
