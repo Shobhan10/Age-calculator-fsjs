@@ -22,6 +22,16 @@ function calcAge() {
   const currnentYear = today.getFullYear;
   const currnentMonth = today.getMonth + 1;
   const currnentDate = today.getDate;
+
+  leapYearCheck(currnentYear);
 }
 
 function displayAge() {}
+
+function leapYearCheck(year) {
+  if (year % 4 === 0 || (year % 100 === 0 && year % 400 === 0)) {
+    months[1] = 29;
+  } else {
+    months[1] = 28;
+  }
+}
